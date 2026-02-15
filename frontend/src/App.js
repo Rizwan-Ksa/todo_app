@@ -60,8 +60,8 @@ class App extends React.Component {
   handleChange(e){
     var name = e.target.name
     var value = e.target.value
-    console.log('Name:', name)
-    console.log('Value:', value)
+    console.log('Namezzzz:', name)
+    console.log('Valuezzz:', value)
 
     this.setState({
       activeItem:{
@@ -166,7 +166,7 @@ class App extends React.Component {
                  <form onSubmit={this.handleSubmit}  id="form">
                     <div className="flex-wrapper">
                         <div style={{flex: 6}}>
-                            <input onChange={this.handleChange} className="form-control" id="title" value={this.state.activeItem.title} type="text" name="title" placeholder="Add task.." />
+                            <input onChange={this.handleChange} className="form-control" id="title" value={this.state.activeItem.title} type="text" name="title" placeholder="Add taskzz.." />
                          </div>
 
                          <div style={{flex: 1}}>
