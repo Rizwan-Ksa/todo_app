@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'docker build . -t rizwanuddindev/django-todo:v1'
+                sh 'docker build . -t rizwanuddindev/django-todo:v2'
             }
         }
         stage('Docker Push') {
@@ -18,7 +18,7 @@ pipeline {
                 
                 withCredentials([usernamePassword(credentialsId: 'DockerHub', usernameVariable: 'dockerHubUser', passwordVariable: 'dockerHubPassword')]){
                 sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
-                sh 'docker push rizwanuddindev/django-todo:v1'
+                sh 'docker push rizwanuddindev/django-todo:v2'
                 }
             }
         }
