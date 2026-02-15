@@ -4,3 +4,4 @@ services:
     image: 'rizwanuddindev/django-todo:latest'
     ports:
       - "8001:8001"
+      
