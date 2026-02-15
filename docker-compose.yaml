@@ -1,6 +1,6 @@
 version: '3.9'
 services:
   web:
-    image: 'rizwanuddindev/rizwan001:latest'
+    image: 'rizwanuddindev/django-todo:latest'
     ports:
       - "8001:8001"
