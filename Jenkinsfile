@@ -10,15 +10,15 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'docker build . -t rizwan001/django-todo-cicd:latest'
+                sh 'docker build . -t rizwanuddindev/django-todo:v1'
             }
         }
         stage('Docker Push') {
             steps {
                 
-                withCredentials([usernamePassword(credentialsId: 'dockerHub', usernameVariable: 'dockerHubUser', passwordVariable: 'dockerHubPassword')]){
+                withCredentials([usernamePassword(credentialsId: 'DockerHub', usernameVariable: 'dockerHubUser', passwordVariable: 'dockerHubPassword')]){
                 sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
-                sh 'docker push rizwan001/django-todo-cicd:latest'
+                sh 'docker push rizwanuddindev/django-todo:v1'
                 }
             }
         }
